@@ -1,6 +1,7 @@
 import sym from "./find-the-symmetric-difference/sym.js";
 import updateInventory from "./inventory-update/inventory.js";
 import permAlone from "./no-repeats-please/permutations.js";
+import pairwise from "./pairwise/pairwise.js";
 
 console.log('Find the Symmetric Difference:', sym([1, 2, 3], [5, 2, 1, 4]));
 
@@ -21,3 +22,5 @@ const newInv = [
 console.log('Inventory Update:', updateInventory(curInv, newInv));
 
 console.log('No Repeats Please:', permAlone('abcdefa'));
+
+console.log('Pairwise:', pairwise([7, 9, 11, 13, 15], 20));
