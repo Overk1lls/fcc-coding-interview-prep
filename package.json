@@ -1,0 +1,28 @@
+{
+  "name": "fcc-coding-interview-prep",
+  "version": "1.0.0",
+  "description": "JS coding interview preparation exercises from FreeCodeCamp",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Overk1lls/fcc-coding-interview-prep.git"
+  },
+  "keywords": [
+    "JS",
+    "code-prep",
+    "FreeCodeCamp",
+    "interview",
+    "exercises"
+  ],
+  "author": "Yurii Pakhota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Overk1lls/fcc-coding-interview-prep/issues"
+  },
+  "homepage": "https://github.com/Overk1lls/fcc-coding-interview-prep#readme",
+  "type": "module"
+}
