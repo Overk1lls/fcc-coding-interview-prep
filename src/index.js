@@ -4,6 +4,7 @@ import updateInventory from "./inventory-update/inventory.js";
 import permAlone from "./no-repeats-please/permutations.js";
 import pairwise from "./pairwise/pairwise.js";
 import selectionSort from "./sorts/selection-sort/selection.js";
+import insertionSort from "./sorts/insertion-sort/insertion.js";
 
 console.log('Find the Symmetric Difference:', sym([1, 2, 3], [5, 2, 1, 4]));
 
@@ -29,3 +30,4 @@ const arrayToSort = [1, 4, 2, 8, 123, 43, 32, 63, 123, 43, 2, 55, 1, 234, 92];
 
 console.log('Buble Sort:', bubbleSort(arrayToSort));
 console.log('Selection Sort:', selectionSort(arrayToSort));
+console.log('Insertion Sort:', insertionSort(arrayToSort));
