@@ -1,3 +1,9 @@
+/**
+ * Sorts an array via quick method. It doesn't mutate the original array,
+ * but rather creates a new sorted one.
+ * @param {number[]} arr 
+ * @returns Sorted array.
+ */
 export default function quickSort(arr) {
     if (arr.length < 2) {
         return arr;

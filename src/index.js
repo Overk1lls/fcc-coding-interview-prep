@@ -6,6 +6,7 @@ import pairwise from "./pairwise/pairwise.js";
 import selectionSort from "./sorts/selection-sort/selection.js";
 import insertionSort from "./sorts/insertion-sort/insertion.js";
 import quickSort from "./sorts/quick-sort/quick.js";
+import mergeSort from "./sorts/merge-sort/merge.js";
 import { arrayEquals } from "./utils.js";
 
 console.log('Find the Symmetric Difference:', sym([1, 2, 3], [5, 2, 1, 4]));
@@ -33,8 +34,10 @@ const sortedByBubble = bubbleSort(arrayToSort);
 const sortedBySelection = selectionSort(arrayToSort);
 const sortedByInsertion = insertionSort(arrayToSort);
 const sortedByQuick = quickSort(arrayToSort);
+const sortedByMerge = mergeSort(arrayToSort);
 
 console.log('Sorts:');
 console.log('\tInsertion:', arrayEquals(sortedByBubble, sortedByInsertion));
 console.log('\tSelection:', arrayEquals(sortedByBubble, sortedBySelection));
 console.log('\tQuick:', arrayEquals(sortedByBubble, sortedByQuick));
+console.log('\tMerge:', arrayEquals(sortedByBubble, sortedByMerge));
