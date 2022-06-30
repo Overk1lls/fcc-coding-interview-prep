@@ -7,6 +7,7 @@ import selectionSort from "./sorts/selection-sort/selection.js";
 import insertionSort from "./sorts/insertion-sort/insertion.js";
 import quickSort from "./sorts/quick-sort/quick.js";
 import mergeSort from "./sorts/merge-sort/merge.js";
+import binarySearch from "./binary-search/binary-search.js";
 import { arrayEquals } from "./utils.js";
 
 console.log('Find the Symmetric Difference:', sym([1, 2, 3], [5, 2, 1, 4]));
@@ -41,3 +42,9 @@ console.log('\tInsertion:', arrayEquals(sortedByBubble, sortedByInsertion));
 console.log('\tSelection:', arrayEquals(sortedByBubble, sortedBySelection));
 console.log('\tQuick:', arrayEquals(sortedByBubble, sortedByQuick));
 console.log('\tMerge:', arrayEquals(sortedByBubble, sortedByMerge));
+
+const testArray = [
+    0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+    23, 49, 70
+];
+console.log(binarySearch(testArray, 0));
