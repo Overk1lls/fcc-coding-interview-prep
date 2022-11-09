@@ -1,4 +1,5 @@
 import './normal-google-coding-interview/index.js';
+import './leetcode/index.js';
 import bubbleSort from "./sorts/bubble-sort/bubble.js";
 import sym from "./find-the-symmetric-difference/sym.js";
 import updateInventory from "./inventory-update/inventory.js";
