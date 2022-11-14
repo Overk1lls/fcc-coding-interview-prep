@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,10 @@
     "url": "https://github.com/Overk1lls/fcc-coding-interview-prep/issues"
   },
   "homepage": "https://github.com/Overk1lls/fcc-coding-interview-prep#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
 }
