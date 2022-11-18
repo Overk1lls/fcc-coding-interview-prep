@@ -2,7 +2,7 @@
  * @example 4895 => [55, 89, true]
  * @example 800 => [34, 55, false]
  * @example 714 => [21, 34, true]
- * @param {number} prod 
+ * @param {number} prod
  */
 export function productFib(prod) {
   let n = 0;

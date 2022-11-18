@@ -1,9 +1,27 @@
 const times = ['year', 'month', 'day', 'hour', 'minute', 'second'];
 
+function formatToPlural(val, i) {
+  return val > 1 ? `${times[i]}s` : times[i];
+}
+
+function formatWithCommas(str) {
+  const split = str.split(' ');
+  let result = '';
+
+  split.forEach((s, i) => {
+    if (!times.includes(s) && !times.includes(s.slice(0, -1))) {
+      result += `${s} `;
+    } else {
+      result += s + (split[i + 1] === 'and' ? ' ' : ', ');
+    }
+  });
+  return result.trimEnd().slice(0, -1);
+}
+
 /**
  * @example 62 => "1 minute and 2 seconds"
  * @example 3662 => "1 hour, 1 minute and 2 seconds"
- * @param {number} seconds 
+ * @param {number} seconds
  */
 export function formatDuration(seconds) {
   if (!seconds) {
@@ -48,7 +66,7 @@ export function formatDuration(seconds) {
   resultArray.forEach((res, i) => {
     if (res) {
       if (i === length) {
-        if (resultArray.filter((val) => val !== 0).length === 1) {
+        if (resultArray.filter((v) => v !== 0).length === 1) {
           result += `${res} ${formatToPlural(res, i)}`;
         } else {
           result += `and ${res} ${formatToPlural(res, i)}`;
@@ -59,22 +77,4 @@ export function formatDuration(seconds) {
     }
   });
   return formatWithCommas(result);
-}
-
-function formatToPlural(val, i) {
-  return val > 1 ? `${times[i]}s` : times[i];
-}
-
-function formatWithCommas(str) {
-  const split = str.split(' ');
-  let result = '';
-
-  split.forEach((s, i) => {
-    if (!times.includes(s) && !times.includes(s.slice(0, -1))) {
-      result += s + ' ';
-    } else {
-      result += s + (split[i + 1] === 'and' ? ' ' : ', ');
-    }
-  });
-  return result.trimEnd().slice(0, -1);
 }

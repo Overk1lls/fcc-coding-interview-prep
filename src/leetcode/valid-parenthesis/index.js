@@ -1,8 +1,8 @@
 /**
  * @example '()' => true
  * @example ')(()))' => false
- * @param {string} parens 
- * @returns 
+ * @param {string} parens
+ * @returns
  */
 export function validParentheses(parens) {
   if (parens.startsWith(')') || parens.endsWith('(')) {
@@ -15,11 +15,10 @@ export function validParentheses(parens) {
     if (el === ')') {
       if (parens[i - 1] !== '(') {
         return false;
-      } else {
-        parens = parens.slice(0, i - 1).concat(parens.slice(i + 1));
-        i = 0;
       }
+      parens = parens.slice(0, i - 1).concat(parens.slice(i + 1));
+      i = 0;
     }
   }
-  return !!!parens.length;
+  return !parens.length;
 }

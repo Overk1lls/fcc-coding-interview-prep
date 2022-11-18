@@ -13,6 +13,8 @@ module.exports = {
   rules: {
     'no-plusplus': 'off',
     'import/prefer-default-export': 'off',
+    'import/extensions': 'off',
     'no-bitwise': 'off',
+    'no-param-reassign': 'off',
   },
 };
