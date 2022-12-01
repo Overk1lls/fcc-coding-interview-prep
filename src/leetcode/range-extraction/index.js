@@ -1,8 +1,9 @@
 /**
- * @example [-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20] => '-10--8,-6,-3-1,3-5,7-11,14,15,17-20'
- * @param {number[]} list 
+ * @example [-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19]
+ * would return '-10--8,-6,-3-1,3-5,7-11,14,15,17-19'
+ * @param {number[]} list
  */
- function solution(list) {
+export function solution(list) {
   /**
    * @type {number[]}
    */
@@ -17,7 +18,7 @@
         result += ',';
       }
       if (temp.length >= 3) {
-        result += temp.shift() + '-' + temp.pop();
+        result += `${temp.shift()}-${temp.pop()}`;
       } else {
         result += temp.join(',');
       }

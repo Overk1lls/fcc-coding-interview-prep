@@ -1,4 +1,22 @@
 /**
+ * @param {number[]} blockResults
+ */
+function findMinBlockIndex(blockResults) {
+  let result = 0;
+
+  blockResults.reduce((prev, cur, i) => {
+    if (prev < cur) {
+      result = i;
+      return cur;
+    }
+    result = i === 0 ? 0 : i - 1;
+    return prev;
+  });
+
+  return result;
+}
+
+/**
  * @param {{ [key: string]: boolean }[]} blocks
  * @param {string[]} reqs
  * @return {number} the number of min block
@@ -24,23 +42,4 @@ export function findMinBlock(blocks, reqs) {
   }
 
   return findMinBlockIndex(blockResults);
-}
-
-/**
- * @param {number[]} blockResults 
- */
-function findMinBlockIndex(blockResults) {
-  let result = 0;
-
-  blockResults.reduce((prev, cur, i) => {
-    if (prev < cur) {
-      result = i;
-      return cur;
-    } else {
-      result = i === 0 ? 0 : i - 1;
-      return prev;
-    }
-  });
-
-  return result;
 }
