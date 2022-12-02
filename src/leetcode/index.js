@@ -1,4 +1,3 @@
-
 export * from './human-readable-duration-format/index.js';
 export * from './valid-parenthesis/index.js';
 export * from './prod-consecutive-fin-nums/index.js';
@@ -7,3 +6,4 @@ export * from './primes-with-even-digits/index.js';
 export * from './nesting-structure-comparison/index.js';
 export * from './range-extraction/index.js';
 export * from './calc-with-functions/index.js';
+export * from './rotate-array-matrix/index.js';
